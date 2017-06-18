@@ -14,7 +14,7 @@ var http = require('http');
 
 // Change applied for OpenShift
 // var port = normalizePort(process.env.PORT || '3000');
-var port = normalizePort(process.env.OPENSHIFT_NODEJS_PORT || '3000');
+var port = normalizePort(process.env.OPENSHIFT_NODEJS_PORT || '8080');
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 app.set('port', port);
