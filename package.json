@@ -2,9 +2,9 @@
   "name": "sphinx-app",
   "version": "1.0.0",
   "private": true,
-  "main": "./bin/www",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -12,7 +12,20 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "hbs": "~4.0.1",
+    "module-name": "0.0.1-security",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
-  }
+  },
+  "description": "The Sphinx Project is a Node.JS app wrapped in Express.JS. The purpose of this app is to demonstrate the VMware deployment details of Kubernetes on different platforms like vSphere, vRA, Photon Platform or NSX-T (to name a few).",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanymichael/sphinx-app.git"
+  },
+  "author": "Hany Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanymichael/sphinx-app/issues"
+  },
+  "homepage": "https://github.com/hanymichael/sphinx-app#readme"
 }
