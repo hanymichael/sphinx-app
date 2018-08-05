@@ -3,6 +3,5 @@ The Sphinx Project is a Node.JS app wrapped in Express.JS. The purpose of this a
 
 The web application calls the os.hostname(); and os.networkinterfaces(); functions to get this information from the local linux container and render this through HBS to the end-user.
 
-Screenshot:
 ![Screenshot](http://www.hanymichaels.com/sphinx-app/sphinxapp.png)  
 
