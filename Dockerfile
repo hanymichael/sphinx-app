@@ -1,5 +1,7 @@
-FROM node:latest
+FROM alpine
 MAINTAINER Hany Michael
+
+RUN apk add --update nodejs net-tools npm
 
 ENV NODE_ENV=production
 ENV PORT=3000
