@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sphinx-deployment-v3
+  labels:
+    app: sphinx-app-v3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sphinx-app-v3
+  template:
+    metadata:
+      labels:
+        app: sphinx-app-v3
+    spec:
+      containers:
+        - name: sphinx-project
+          image: hanymichael/sphinx-project:v2
+          ports:
+            - containerPort: 300
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sphinx-svc-v3
+spec:
+  #type: NodePort
+  type: LoadBalancer
+  ports:
+    - port: 80
+      nodePort: 30102
+      targetPort: 3000
+      protocol: TCP
+      name: http
+  selector:
+    app: sphinx-app-v3
